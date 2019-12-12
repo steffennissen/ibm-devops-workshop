@@ -19,7 +19,7 @@ app.use (function (req, res, next) {
                 res.redirect('https://' + req.headers.host + req.url);
         }
 });
-console.log("UNCOMMENT HTTP STUFF BEFORE PUSHING");
+//console.log("UNCOMMENT HTTP STUFF BEFORE PUSHING");
 
 
 const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
@@ -30,7 +30,7 @@ const toneAnalyzer = new ToneAnalyzerV3({
   authenticator: new IamAuthenticator({
     apikey: 'dJsr2C1jLT6nMBdbwbuIanKs5ifWEln39A0ZzswJvZkz',
   }),
-  url: '{url}'
+  url: 'https://gateway.watsonplatform.net/tone-analyzer/api'
 });
 
 var text_tone = {
@@ -51,6 +51,7 @@ mydb.list({ include_docs: true }, function(err, body) {
     }
 });
 var test_res_tone = {};
+
 app.get('/myform', function(req, res){ 
     myText = req.query.mytext; //mytext is the name of your input box
     name = req.query.name;
