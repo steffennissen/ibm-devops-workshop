@@ -10,7 +10,6 @@ app.set('view engine', 'ejs');
 app.enable('trust proxy');
 
 //comment out to test on localhost
-/*
 app.use (function (req, res, next) {
         if (req.secure) {
                 // request was via https, so do no special handling
@@ -19,7 +18,7 @@ app.use (function (req, res, next) {
                 // request was via http, so redirect to https
                 res.redirect('https://' + req.headers.host + req.url);
         }
-});*/
+});
 console.log("UNCOMMENT HTTP STUFF BEFORE PUSHING");
 
 
