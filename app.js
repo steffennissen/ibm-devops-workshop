@@ -22,14 +22,16 @@ app.use (function (req, res, next) {
 console.log("UNCOMMENT HTTP STUFF BEFORE PUSHING");
 
 
-const ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
+const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
+const { IamAuthenticator } = require('ibm-watson/auth');
 
-/*const toneAnalyzer = new ToneAnalyzerV3({
-	version: '',
-	username: '',
-	password: '',
-	url: 'https://gateway.watsonplatform.net/tone-analyzer/api'
-});*/
+const toneAnalyzer = new ToneAnalyzerV3({
+  version: '{version}',
+  authenticator: new IamAuthenticator({
+    apikey: 'dJsr2C1jLT6nMBdbwbuIanKs5ifWEln39A0ZzswJvZkz',
+  }),
+  url: '{url}'
+});
 
 var text_tone = {
 	name: name,
