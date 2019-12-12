@@ -1,4 +1,4 @@
-/*var cacheName = 'hello-pwa';
+var cacheName = 'hello-pwa';
 var filesToCache = [
   '/',
   '/tones',
@@ -29,4 +29,4 @@ self.addEventListener('fetch', function(e) {
     })
   );
 });
-*/
+
